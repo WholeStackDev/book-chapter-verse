@@ -1,9 +1,9 @@
 import { data } from '$lib/data/web';
 import lz from 'lz-string';
 import NodeCache from 'node-cache';
-const serverCache = new NodeCache();
 
 export async function get() {
+	const serverCache = new NodeCache();
 	try {
 		var compressedData = serverCache.get('web');
 		if (compressedData == undefined) {
