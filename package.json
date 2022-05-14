@@ -25,6 +25,7 @@
 	"type": "module",
 	"dependencies": {
 		"localforage": "^1.10.0",
-		"lz-string": "^1.4.4"
+		"lz-string": "^1.4.4",
+		"node-cache": "^5.1.2"
 	}
 }
