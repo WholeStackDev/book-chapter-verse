@@ -24,6 +24,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"localforage": "^1.10.0"
+		"localforage": "^1.10.0",
+		"lz-string": "^1.4.4"
 	}
 }

@@ -1,10 +1,11 @@
 import { data } from '$lib/data/web';
+import lz from 'lz-string';
 
 export async function get() {
 	try {
-		const stringData = JSON.stringify(data);
+		const compressedData = lz.compressToUTF16(JSON.stringify(data));
 		return {
-			body: stringData
+			body: compressedData
 		};
 	} catch (error) {
 		console.log(error);
