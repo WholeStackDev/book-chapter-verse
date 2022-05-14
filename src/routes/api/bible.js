@@ -10,7 +10,8 @@ export async function get() {
 	} catch (error) {
 		console.log(error);
 		return {
-			status: 500
+			status: 500,
+			body: error
 		};
 	}
 }
