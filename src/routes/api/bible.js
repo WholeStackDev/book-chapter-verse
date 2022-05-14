@@ -1,11 +1,9 @@
-import fs from 'fs';
+import { data } from '$lib/data/web';
 
 export async function get() {
 	try {
-		const data = fs.readFileSync('./web.json');
-
 		return {
-			body: data
+			body: JSON.stringify(data)
 		};
 	} catch (error) {
 		console.log(error);
