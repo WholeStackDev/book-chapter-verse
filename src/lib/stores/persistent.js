@@ -5,7 +5,9 @@ import db from 'localforage';
 export const bible = writable([]);
 
 if (browser) {
-	if (await db.getItem('bible')) bible.set(JSON.parse(await db.getItem('bible')));
+	(async function () {
+		if (await db.getItem('bible')) bible.set(JSON.parse(await db.getItem('bible')));
 
-	bible.subscribe((x) => db.setItem('bible', JSON.stringify(x)));
+		bible.subscribe((x) => db.setItem('bible', JSON.stringify(x)));
+	})();
 }
