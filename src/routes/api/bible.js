@@ -2,8 +2,9 @@ import { data } from '$lib/data/web';
 
 export async function get() {
 	try {
+		const stringData = JSON.stringify(data);
 		return {
-			body: JSON.stringify(data)
+			body: stringData
 		};
 	} catch (error) {
 		console.log(error);
